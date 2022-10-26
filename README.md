@@ -1,2 +1,2 @@
-# STEGANOGRAPHIE
+# Stéganographie
 
