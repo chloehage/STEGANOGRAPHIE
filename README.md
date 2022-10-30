@@ -6,6 +6,6 @@
 - pouvoir créer une image à partir de deux images en dissimulant la deuxième.
 - être capable de séparer les deux images qui constituent l'image finale.
 ##### Ameliorations futures:
-- utiliser des découpages différents (3 bits de la première image et 5 de la deuxième, 5/3, 6/4).
+- utiliser des découpages différents (3 bits de la première image et 5 de la deuxième, 5/3, 6/2).
 - utiliser des images de différentes tailles.
 
