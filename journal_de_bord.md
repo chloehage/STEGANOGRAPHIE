@@ -9,3 +9,6 @@
 
 ## 30/10
 - création du ReadMe.md et du journal_de_bord.md
+
+## 01/11
+- rectification de certaines parties du code.
