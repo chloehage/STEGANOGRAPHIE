@@ -8,4 +8,4 @@
 ##### Ameliorations futures:
 - utiliser des découpages différents (3 bits de la première image et 5 de la deuxième, 5/3, 6/2).
 - utiliser des images de différentes tailles.
-
+- interface graphique ???
