@@ -12,3 +12,6 @@
 
 ## 01/11
 - rectification de certaines parties du code.
+
+## 05/11
+- encore des rectifications pour que le code marche un joue :')
