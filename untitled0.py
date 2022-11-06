@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
 """
 Spyder Editor
 
 This is a temporary script file.
 """
 
-from email.mime import image
 from PIL.Image import *
 from PIL import Image
 
 img_fake = open("gouv.jpg")
 img_cacher = open("illuminati.jpg")
-img_coder = open("blanc.jpg")
+
 '''
 img_coder = open("image3.png")
 img_decoder = open("image4.png") #créer un truc pour que a chaque fois qu'on utilise decoder on recréer une image img_decoderx
@@ -24,7 +22,7 @@ lpixels_separation_img2 = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]
 
 pixels_image = img_fake.size
 pixels_image1 = img_cacher.size
-pixels_image2 = img_coder.size
+
 
 ## TODO: remove this unused code
 """
@@ -37,6 +35,7 @@ def placer_pixels():
 
 def cacher(image_front, image_back):
     pixels_image = image_front.size
+    img_coder = Image.new(mode="RGB", size=(pixels_image))
     for x in range(pixels_image[0]):
         for y in range(pixels_image[1]):
             (r_fake, v_fake, b_fake) = image_front.getpixel((x,y))
@@ -63,9 +62,12 @@ def cacher(image_front, image_back):
             vconv = int(list_pixel[1])
             bconv = int(list_pixel[2])
             img_coder.putpixel((x,y),(rconv, vconv, bconv))
+    img_coder.save('img_code.jpg')
     img_coder.show()
-img_code = img_coder.save('img_coder.jpg')#enregistrer l'image
 
+    
+cacher(img_fake, img_cacher)
+img_coder = open('img_code.jpg')
 
 def decoder(img_coder) :
     pixels_image = img_coder.size
@@ -83,24 +85,24 @@ def decoder(img_coder) :
             r3_faible = rc_wait[7:]
             v3_faible = vc_wait[7:]
             b3_faible = bc_wait[7:]
-            lpixels_separation_img[0] = r3_fort
-            lpixels_separation_img[1] = v3_fort
-            lpixels_separation_img[2] = b3_fort
-            lpixels_separation_img2[0] = r3_faible
-            lpixels_separation_img2[1] = v3_faible
-            lpixels_separation_img2[2] = b3_faible
-            rconv = int(lpixels_separation_img[0])
-            vconv = int(lpixels_separation_img[1])
-            bconv = int(lpixels_separation_img[2])
+            lpixels_separation_img[0][:4] = r3_fort
+            lpixels_separation_img[1][:4] = v3_fort
+            lpixels_separation_img[2][:4] = b3_fort
+            lpixels_separation_img2[0][4:] = r3_faible
+            lpixels_separation_img2[1][4:] = v3_faible
+            lpixels_separation_img2[2][4:] = b3_faible
+            rconv = int(str(lpixels_separation_img[0]),2)
+            vconv = int(str(lpixels_separation_img[1]),2)
+            bconv = int(str(lpixels_separation_img[2]),2)
             img_decoder.putpixel((x,y),(rconv, vconv, bconv))
-            rconv1 = int(lpixels_separation_img2[0])
-            vconv1 = int(lpixels_separation_img2[1])
-            bconv1 = int(lpixels_separation_img2[2])
+            rconv1 = int(str(lpixels_separation_img2[0]),2)
+            vconv1 = int(str(lpixels_separation_img2[1]),2)
+            bconv1 = int(str(lpixels_separation_img2[2]),2)
             img_decoder1.putpixel((x,y),(rconv1, vconv1, bconv1))
     img_decoder.show()
     img_decoder1.show()
 
-cacher(img_fake, img_cacher)
+
 decoder(img_coder)
 
 
