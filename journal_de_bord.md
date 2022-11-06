@@ -15,3 +15,7 @@
 
 ## 05/11
 - encore des rectifications pour que le code marche un joue :')
+
+## 06/11
+- encooore des rectifications, cette fois les deux foncions marchent! 
+- seul problème : comment réutiliser l'image créée dans cacher() dans décoder()
