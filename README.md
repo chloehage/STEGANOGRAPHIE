@@ -9,3 +9,9 @@
 - utiliser des découpages différents (3 bits de la première image et 5 de la deuxième, 5/3, 6/2).
 - utiliser des images de différentes tailles.
 - interface graphique ???
+##### 2 fonctions:
+- cacher() qui récupère les codes r,v,b de chaque pixel des deux images (image_front et image_back) et qui les convertie en binaire pour les redistribuer et creer les pixels d'une troisième image (img_coder).
+- decoder() qui part de l'image créée par cacher() et récupère les bits de points forts des deux images cachées.
+##### Bibliothèques importées:
+- PIL
+- email.mime
