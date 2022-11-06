@@ -14,4 +14,3 @@
 - decoder() qui part de l'image créée par cacher() et récupère les bits de points forts des deux images cachées.
 ##### Bibliothèques importées:
 - PIL
-- email.mime
