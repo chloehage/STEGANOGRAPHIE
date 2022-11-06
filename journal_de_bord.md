@@ -5,7 +5,7 @@
 - création d'une fonction decoder() pour décoder l'image finale.
 
 ## 29/10
-- fonction placer_pixel() pour placer les pixels créés à partir des deux images sur l'image finale.
+- fonction placer_pixel() pour placer les pixels créés à partir des deux images sur l'image finale. (pas utilisée au final)
 
 ## 30/10
 - création du ReadMe.md et du journal_de_bord.md
