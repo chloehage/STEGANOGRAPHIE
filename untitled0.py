@@ -100,7 +100,7 @@ def decoder(img_coder) :
     img_decoder.show()
     img_decoder1.show()
 
-
+cacher(img_fake, img_cacher)
 decoder(img_coder)
 
 
