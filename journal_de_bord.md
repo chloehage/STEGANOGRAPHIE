@@ -17,5 +17,8 @@
 - encore des rectifications pour que le code marche un joue :')
 
 ## 06/11
-- encooore des rectifications, cette fois les deux foncions marchent! 
-- seul problème : comment réutiliser l'image créée dans cacher() dans décoder()
+- encooore des rectifications. 
+- seul problème : les bits sont dans une liste, il faut la convertir en chaine pour la convertir.
+
+## 10/11
+- convertion de la liste en chaine.
