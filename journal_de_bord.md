@@ -22,3 +22,8 @@
 
 ## 10/11
 - convertion de la liste en chaine.
+
+## 17/11
+- ajout de 0 pour que le code RVB soit bien sur 8 bits et que la conversion en décimal marche
+- on a découvert que notre fonction ne mqrchaut pas complètement et donc on vitn de découvrir à quoi notre image était censée ressembler depuis 2 semaines
+- donc notre première fonction fonctionne désormais
