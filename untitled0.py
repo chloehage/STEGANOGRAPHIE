@@ -133,7 +133,6 @@ def decoder(img_coder) :
             rconv = int(rchaine,2)
             vconv = int(vchaine,2)
             bconv = int(bchaine,2)
-            print(rconv)
             img_decoder.putpixel((x,y),(rconv, vconv, bconv))
             rchaine1 = ''.join(lpixels_separation_img2[0])
             vchaine1 = ''.join(lpixels_separation_img2[1])
@@ -143,6 +142,7 @@ def decoder(img_coder) :
             bconv1 = int(bchaine1,2)
             img_decoder1.putpixel((x,y),(rconv1, vconv1, bconv1))
     img_decoder.show()
+    img_decoder1.show()
 
 
 
