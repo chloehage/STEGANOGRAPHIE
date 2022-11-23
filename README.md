@@ -14,3 +14,7 @@
 - decoder() qui part de l'image créée par cacher() et récupère les bits de points forts des deux images cachées.
 ##### Bibliothèques importées:
 - PIL
+##### Sites de référence:
+- https://infoforall.fr/fiches/fiches-act1060.html
+- https://fr.moonbooks.org/Articles/Déterminer-la-taille-dune-image-avec-python/
+- https://raymond-namyst.emi.u-bordeaux.fr/ens/lycee/TD2.html
