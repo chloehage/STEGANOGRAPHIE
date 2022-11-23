@@ -1,7 +1,5 @@
-
 """
 Spyder Editor
-
 This is a temporary script file.
 """
 
@@ -10,12 +8,6 @@ from PIL import Image
 
 img_fake = open("gouv.jpg")
 img_cacher = open("illuminati.jpg")
-
-'''
-img_coder = open("image3.png")
-img_decoder = open("image4.png") #créer un truc pour que a chaque fois qu'on utilise decoder on recréer une image img_decoderx
-img_decoder1 = open("image5.png")
-'''
 
 list_pixel = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
 lpixels_separation_img = [['0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0'],['0','0','0','0','0','0','0','0']]
@@ -34,6 +26,12 @@ def placer_pixels():
 """
 
 def cacher(image_front, image_back):
+    """
+    Cette fonction récupère les codes r,v,b de chaque pixel 
+    des deux images (image_front et image_back) et  les convertie 
+    en binaire pour les redistribuer et creer les pixels d'une troisième image 
+    (img_coder).
+    """
     pixels_image = image_front.size
     img_coder = Image.new(mode="RGB", size=(pixels_image))
     for x in range(pixels_image[0]):
@@ -84,7 +82,6 @@ def cacher(image_front, image_back):
             list_pixel[0] = r
             list_pixel[1] = v
             list_pixel[2] = b
-            print(list_pixel)
             # reconversion en décimal
             rconv = int(list_pixel[0],2)
             vconv = int(list_pixel[1],2)
@@ -99,6 +96,10 @@ cacher(img_fake, img_cacher)
 img_code = open('img_code.jpg')
 
 def decoder(img_coder) :
+    """
+    Cette fonction part de l'image créée par cacher() 
+    et récupère les bits de points forts des deux images cachées.
+    """
     pixels_image = img_coder.size
     img_decoder = Image.new(mode="RGB", size=(pixels_image))
     img_decoder1 = Image.new(mode="RGB", size=(pixels_image))
@@ -129,22 +130,21 @@ def decoder(img_coder) :
             vchaine = ''.join(lpixels_separation_img[1])
             bchaine = ''.join(lpixels_separation_img[2])
             # conversion en décimal
-            rconv = int(rchaine)
-            vconv = int(vchaine)
-            bconv = int(bchaine)
+            rconv = int(rchaine,2)
+            vconv = int(vchaine,2)
+            bconv = int(bchaine,2)
+            print(rconv)
             img_decoder.putpixel((x,y),(rconv, vconv, bconv))
             rchaine1 = ''.join(lpixels_separation_img2[0])
             vchaine1 = ''.join(lpixels_separation_img2[1])
             bchaine1 = ''.join(lpixels_separation_img2[2])
-            rconv1 = int((rchaine1),2)
-            vconv1 = int((vchaine1),2)
-            bconv1 = int((bchaine1),2)
+            rconv1 = int(rchaine1,2)
+            vconv1 = int(vchaine1,2)
+            bconv1 = int(bchaine1,2)
             img_decoder1.putpixel((x,y),(rconv1, vconv1, bconv1))
     img_decoder.show()
-    img_decoder1.show()
+
 
 
 decoder(img_code)
-
-
 
