@@ -32,3 +32,4 @@
 - enfait on se cassait la tête à vouloir mettre les bits dans un liste alors on les a directement mis dans une chaine de caractères en ajoutant les '0' nécessaires en début de chaine.
 - les images apparraissent mais sont difficiles à decrypter, elles apparaissent en très sombre
 - l'image cachée quand elle est décodée bug mais maintenant l'autre est mieux :))
+- code beauty = code joli
