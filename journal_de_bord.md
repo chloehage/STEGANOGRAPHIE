@@ -27,3 +27,7 @@
 - ajout de 0 pour que le code RVB soit bien sur 8 bits et que la conversion en décimal marche
 - on a découvert que notre fonction ne marchait pas complètement et donc on vient de découvrir à quoi notre image était censée ressembler depuis 2 semaines
 - donc notre première fonction fonctionne désormais
+
+## 24/11
+- enfait on se cassait la tête à vouloir mettre les bits dans un liste alors on les a directement mis dans une chaine de caractères en ajoutant les '0' nécessaires en début de chaine.
+- les images apparraissent mais sont difficiles à decrypter, elles apparaissent en très sombre
