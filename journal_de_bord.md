@@ -14,7 +14,7 @@
 - rectification de certaines parties du code.
 
 ## 05/11
-- encore des rectifications pour que le code marche un joue :')
+- encore des rectifications pour que le code marche un jour :')
 
 ## 06/11
 - encooore des rectifications. 
@@ -25,5 +25,5 @@
 
 ## 17/11
 - ajout de 0 pour que le code RVB soit bien sur 8 bits et que la conversion en décimal marche
-- on a découvert que notre fonction ne mqrchaut pas complètement et donc on vitn de découvrir à quoi notre image était censée ressembler depuis 2 semaines
+- on a découvert que notre fonction ne marchait pas complètement et donc on vient de découvrir à quoi notre image était censée ressembler depuis 2 semaines
 - donc notre première fonction fonctionne désormais
