@@ -81,12 +81,12 @@ def cacher(image_front, image_back):
             bconv = int(list_pixel[2], 2)
             # formation du pixel sur l'image finale
             img_coder.putpixel((x, y), (rconv, vconv, bconv))
-    img_coder.save("img_code.jpg")
+    img_coder.save("img_code.bmp","BMP")
     img_coder.show()
 
 
 cacher(img_fake, img_cacher)
-img_code = open("img_code.jpg")
+img_code = Image.open("img_code.bmp")
 
 
 def decoder(img_coder):
@@ -97,6 +97,7 @@ def decoder(img_coder):
     pixels_image = img_coder.size
     img_decoder = Image.new(mode="RGB", size=(pixels_image))
     img_decoder1 = Image.new(mode="RGB", size=(pixels_image))
+    
     for x in range(pixels_image[0]):
         for y in range(pixels_image[1]):
             # on récupère le pixel à la position x,y de img_coder
