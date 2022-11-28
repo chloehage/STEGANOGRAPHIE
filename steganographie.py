@@ -6,8 +6,8 @@ This is a temporary script file.
 from PIL.Image import *
 from PIL import Image
 
-img_cacher = open("gouv.jpg")
-img_fake = open("illuminati.jpg")
+img_fake = open("gouv.jpg")
+img_cacher = open("illuminati.jpg")
 
 list_pixel = [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -81,12 +81,12 @@ def cacher(image_front, image_back):
             bconv = int(list_pixel[2], 2)
             # formation du pixel sur l'image finale
             img_coder.putpixel((x, y), (rconv, vconv, bconv))
-    img_coder.save("img_code.jpg")
+    img_coder.save("img_code.bmp","BMP")
     img_coder.show()
 
 
 cacher(img_fake, img_cacher)
-img_code = open("img_code.jpg")
+img_code = open("img_code.bmp")
 
 
 def decoder(img_coder):
